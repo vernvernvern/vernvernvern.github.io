@@ -27,39 +27,39 @@
 			position: relative;
 		}
 
-		input {
-			width: 6.5em;
-			color: white;
+		button {
+			z-index: 1;
+			position: relative;
 			font-size: inherit;
 			font-family: inherit;
-			background-color: transparent;
-			border: 1px solid transparent;
-			border-bottom-color: hsla(185, 100%, 62%, 0.2);
-		}
-
-		input:focus {
+			color: white;
+			padding: 0.5em 1em;
 			outline: none;
+			border: none;
+			background-color: hsl(246, 41%, 21%);
 		}
 
-		input::placeholder {
-			color: hsla(0, 0%, 100%, 0.6);
-		}
-
-		span {
+		button::before {
+			content: '';
+			z-index: -1;
 			position: absolute;
+			top: 0;
 			bottom: 0;
 			left: 0;
 			right: 0;
-			height: 1px;
-			background-color: #dbff3c;
-			transform-origin: bottom right;
-			transform: scaleX(0);
-			transition: transform 0.5s ease;
+			background-color: #fc2f70;
+			transform-origin: center bottom;
+			transform: scaleY(0);
+			transition: transform 0.25s ease-in-out;
 		}
 
-		input:focus~span {
-			transform-origin: bottom left;
-			transform: scaleX(1);
+		button:hover {
+			cursor: pointer;
+		}
+
+		button:hover::before {
+			transform-origin: center top;
+			transform: scaleY(1);
 		}
 	</style>
 	<title>sounds</title>
@@ -70,8 +70,7 @@
 		<header class="logo">SOUNDBOARD</header>
 		<div class="container">
 			<div>
-				<input type="text" placeholder="Input Underline">
-				<span></span>
+				<button>Press Me</button>
 			</div>
 		</div>
 	</div>
