@@ -22,6 +22,45 @@
 		.player {
 			padding: 15px;
 		}
+
+		div {
+			position: relative;
+		}
+
+		input {
+			width: 6.5em;
+			color: white;
+			font-size: inherit;
+			font-family: inherit;
+			background-color: transparent;
+			border: 1px solid transparent;
+			border-bottom-color: hsla(185, 100%, 62%, 0.2);
+		}
+
+		input:focus {
+			outline: none;
+		}
+
+		input::placeholder {
+			color: hsla(0, 0%, 100%, 0.6);
+		}
+
+		span {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background-color: #3cefff;
+			transform-origin: bottom right;
+			transform: scaleX(0);
+			transition: transform 0.5s ease;
+		}
+
+		input:focus~span {
+			transform-origin: bottom left;
+			transform: scaleX(1);
+		}
 	</style>
 	<title>1mb.site soundboard</title>
 </head>
@@ -31,15 +70,22 @@
 		<header class="logo">SOUNDBOARD</header>
 		<div class="container">
 			<section class="player">
-				<input type="image" alt="You've Got Mail" src="./snd/" </section> </div> </div> <!-- Optional JavaScript
-					-->
-				<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-					integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-					crossorigin="anonymous"></script>
-				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-					integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-					crossorigin="anonymous"></script>
+				<input type="image" alt="You've Got Mail" src="./snd/youGotmail.mp3" </section> <div>
+				<input type="text" placeholder="Input Underline">
+				<span></span>
+		</div>
+
+	</div>
+	</div>
+	<!--
+					Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+	</script>
 </body>
 
 </html>
