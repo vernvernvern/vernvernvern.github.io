@@ -1,126 +1,194 @@
-<!doctype html>
-<html lang="en">
+<html>
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<style type="text/css">
-		.logo {
-			background-color: #002240;
-			color: white;
-			font-weight: bold;
-			font-size: 3em;
-			padding: 0px 50px 5px 0px;
-			text-align: right;
-			border-color: red;
-		}
-
-		.player {
-			padding: 15px;
-		}
-
-		div {
-			position: relative;
-		}
-
-		button {
-			z-index: 1;
-			position: relative;
-			font-size: 3em;
-			font-family: inherit;
-			color: white;
-			padding: 0.5em 1em;
-			outline: none;
-			border: none;
-			background-color: hsl(203, 80.9%, 18.4%);
-		}
-
-		button::before {
-			content: '';
-			z-index: -1;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background-color: #0966a1;
-			transform-origin: center bottom;
-			transform: scaleY(0);
-			transition: transform 0.25s ease-in-out;
-		}
-
-		button:hover {
-			cursor: pointer;
-		}
-
-		button:hover::before {
-			transform-origin: center top;
-			transform: scaleY(1);
-		}
-
-		span {
-			position: relative;
-		}
-
-		span::before,
-		span::after {
-			content: '';
-			position: absolute;
-			left: 0;
-			right: 0;
-			height: 2px;
-			background-color: #fc2f70;
-			transform: scaleX(0);
-			transition: transform 0.5s ease;
-		}
-
-		span::before {
-			top: 0;
-			transform-origin: center right;
-		}
-
-		span:hover::before {
-			transform-origin: center left;
-			transform: scaleX(1);
-		}
-
-		span::after {
-			bottom: 0;
-			transform-origin: center left;
-		}
-
-		span:hover::after {
-			transform-origin: center right;
-			transform: scaleX(1);
-		}
-	</style>
-	<title>sounds</title>
-</head>
-
-<body>
-	<div class="container">
-		<header class="logo">SOUNDBOARD</header>
+	<title>Soundboard</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="flex-container.css" </head> <body>
+	<div class="wrapper">
 		<div class="container">
-			<div>
-				<section>
-					<button><span>Press Me</span></button>
-				</section>
+			<div class="list">
+				<!-- Random -->
+				<div class="list__header">
+					<img src="./img/ballard-equalizer-bars-400x300.gif" alt="avatar">
+					<div class="hostname">Random</div>
+				</div>
+				<div class="list__body">
+					<div class="list__item" data-key="49">
+						<div class="list__item-key">1</div>
+						<div class="list__item-quote">Record Scratch 💿
+						</div>
+					</div>
+					<div class="list__item" data-key="50">
+						<div class="list__item-key">2</div>
+						<div class="list__item-quote">*Airhorns 🔊 🔊</div>
+					</div>
+					<div class="list__item" data-key="51">
+						<div class="list__item-key">3</div>
+						<div class="list__item-quote">You Got Mail</div>
+					</div>
+					<div class="list__item" data-key="52">
+						<div class="list__item-key">4</div>
+						<div class="list__item-quote">Buzzer Wrong Answer</div>
+					</div>
+					<div class="list__item" data-key="53">
+						<div class="list__item-key">5</div>
+						<div class="list__item-quote">Lil Jon: What?!</div>
+					</div>
+					<div class="list__item" data-key="54">
+						<div class="list__item-key">6</div>
+						<div class="list__item-quote">Lil Jon: Yeah!</div>
+					</div>
+					<div class="list__item" data-key="55">
+						<div class="list__item-key">7</div>
+						<div class="list__item-quote">Lil Jon: Okay!</div>
+					</div>
+					<div class="list__item" data-key="56">
+						<div class="list__item-key">8</div>
+						<div class="list__item-quote">Batman</div>
+					</div>
+					<div class="list__item" data-key="57">
+						<div class="list__item-key">9</div>
+						<div class="list__item-quote">Badum Tss (Bad Joke) 🥁</div>
+					</div>
+					<div class="list__item" data-key="48">
+						<div class="list__item-key">0</div>
+						<div class="list__item-quote">AUSA</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Memes -->
+			<div class="list">
+				<div class="list__header">
+					<img src="./img/peppa-pig.png" alt="avatar">
+					<div class="hostname">Memes</div>
+				</div>
+				<div>
+					<div class="list__body">
+						<div class="list__item" data-key="81">
+							<div class="list__item-key">Q</div>
+							<div class="list__item-quote">Chaccaron</div>
+						</div>
+						<div class="list__item" data-key="87">
+							<div class="list__item-key">W</div>
+							<div class="list__item-quote">Deez Nuts!🥜</div>
+						</div>
+						<div class="list__item" data-key="69">
+							<div class="list__item-key">E</div>
+							<div class="list__item-quote">The Price is Right Losing Horn</div>
+						</div>
+						<div class="list__item" data-key="82">
+							<div class="list__item-key">R</div>
+							<div class="list__item-quote">Ting Goes Skrrr</div>
+						</div>
+						<div class="list__item" data-key="84">
+							<div class="list__item-key">T</div>
+							<div class="list__item-quote">Watch me Whip, Watch me Nae Nae</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Star Trek -->
+			<div class="list">
+				<div class="list__header">
+					<img src="" alt="avatar">
+					<div class="hostname">Star Trek</div>
+				</div>
+				<div class="list__body">
+					<div class="list__item" data-key="65">
+						<div class="list__item-key">A</div>
+						<div class="list__item-quote">Captain's Log 👨🏼‍✈️</div>
+					</div>
+					<div class="list__item" data-key="83">
+						<div class="list__item-key">S</div>
+						<div class="list__item-quote">Kirk to Enterprise</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="list">
+				<div class="list__header">
+					<img src="" alt="avatar">
+					<div class="hostname">Test</div>
+				</div>
+				<div class="list__body">
+					<div class="list__item" data-key="59">
+						<div class="list__item-key">;</div>
+						<div class="list__item-quote">Test</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- Blank -->
 	<!--
-					Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-	</script>
-</body>
+          <div class="list">
+            <div class="list__header">
+              <img src="" alt="avatar">
+              <div class="hostname">BLANK</div>
+            </div>
+            <div class="list__body">
+              <div class="list__item" data-key="">
+                <div class="list__item-key">**</div>
+                <div class="list__item-quote">BLANK</div>
+              </div>
+            </div>
+          </div>
+          -->
+	</div> <!-- End Container class-->
+	</div> <!-- End Wrapper class. -->
+
+	<audio data-key="48" src="./snd/ausa.wav"></audio>
+	<audio data-key="49" src="./snd/Record Scratch.mp3"></audio>
+	<audio data-key="50" src="./snd/airhorns.wav"></audio>
+	<audio data-key="51" src="./snd/youGotmail.mp3"></audio>
+	<audio data-key="52" src="./snd/Buzzer Wrong Answer.mp3"></audio>
+	<audio data-key="53" src="./snd/liljonwhat.wav"></audio>
+	<audio data-key="54" src="./snd/liljonyeah.wav"></audio>
+	<audio data-key="55" src="./snd/liljonokay.wav"></audio>
+	<audio data-key="56" src="./snd/Batman Transition.mp3"></audio>
+	<audio data-key="57" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/syntax_random_badjoke.wav"></audio>
+	<audio data-key="59"
+		src="data:audio/mpeg;base64,/+MYxAAAAANIAAAAAExBTUUzLjk4LjIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">;</audio>
+	<audio data-key="60" src=""></audio>
+	<audio data-key="61" src=""></audio>
+	<audio data-key="62" src=""></audio>
+	<audio data-key="63" src=""></audio>
+	<audio data-key="64" src=""></audio>
+	<audio data-key="65" src="./snd/Kirk-Captain's log, stardate unkown.mp3"></audio>
+	<audio data-key="66" src=""></audio>
+	<audio data-key="67" src=""></audio>
+	<audio data-key="68" src=""></audio>
+	<audio data-key="69" src="./snd/the-price-is-right-losing-horn.mp3"></audio>
+	<audio data-key="70" src=""></audio>
+	<audio data-key="71" src=""></audio>
+	<audio data-key="72" src=""></audio>
+	<audio data-key="73" src=""></audio>
+	<audio data-key="74" src=""></audio>
+	<audio data-key="75" src=""></audio>
+	<audio data-key="76" src=""></audio>
+	<audio data-key="77" src=""></audio>
+	<audio data-key="78" src=""></audio>
+	<audio data-key="79" src=""></audio>
+	<audio data-key="80" src=""></audio>
+	<audio data-key="81" src="./snd/chaccaron.mp3"></audio>
+	<audio data-key="82" src="./snd/The Ting Goes Skrra.mp3"></audio>
+	<audio data-key="83" src="./snd/kirk-to-enterprise-lb.mp3"></audio>
+	<audio data-key="84" src="./snd/whip-nae-nae.wav"></audio>
+	<audio data-key="85" src=""></audio>
+	<audio data-key="86" src=""></audio>
+	<audio data-key="87" src="./snd/Deez Nuts Short.mp3"></audio>
+	<audio data-key="88" src=""></audio>
+	<audio data-key="89" src=""></audio>
+	<audio data-key="90" src=""></audio>
+
+	<script src="javascript.js"></script>
+
+	<!-- data:audio/mpeg;base64,/+MYxAAAAANIAAAAAExBTUUzLjk4LjIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+
+	</body>
 
 </html>
