@@ -111,7 +111,7 @@ body {
   border-radius: var(--borderWidth);
 }
 
- .gradient-border:after {
+.gradient-border:after {
   content: '';
   position: absolute;
   top: calc(-1 * var(--borderWidth));
@@ -123,6 +123,10 @@ body {
   z-index: -1;
   /*animation: animatedgradient 5s ease alternate infinite; */
   background-size: 300% 300%;
+}
+
+.header-gradient:after {
+
 }
 
 @keyframes animatedgradient {
