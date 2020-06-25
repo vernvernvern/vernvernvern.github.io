@@ -125,8 +125,25 @@ body {
   background-size: 300% 300%;
 }
 
-.header-gradient:after {
+.header-gradient-border {
+  --borderWidth: 1px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
 
+.header-gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  /*animation: animatedgradient 5s ease alternate infinite; */
+  background-size: 300% 300%;
 }
 
 @keyframes animatedgradient {
@@ -153,21 +170,87 @@ body {
   }
 }
 
-/* Large Devices, Wide Screens */
-/* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
-  .container {
-    grid-template-columns: 1fr 1fr;
-    width: 90%;
-  }
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 1px;
 }
 
-/* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 0% 0% 0% 1%;
 }
 
-/* Extra Small Devices, Phones */
-/* Custom, iPhone Retina */
+.col:first-child {
+  margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 */
+}
+
+/*  GRID OF EIGHT  */
+.span_8_of_8 {
+  width: 100%;
+}
+
+.span_7_of_8 {
+  width: 87.35%;
+}
+
+.span_6_of_8 {
+  width: 74.7%;
+}
+
+.span_5_of_8 {
+  width: 62.05%;
+}
+
+.span_4_of_8 {
+  width: 49.4%;
+}
+
+.span_3_of_8 {
+  width: 36.75%;
+}
+
+.span_2_of_8 {
+  width: 24.1%;
+}
+
+.span_1_of_8 {
+  width: 11.45%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+
+  .span_1_of_8,
+  .span_2_of_8,
+  .span_3_of_8,
+  .span_4_of_8,
+  .span_5_of_8,
+  .span_6_of_8,
+  .span_7_of_8,
+  .span_8_of_8 {
+    width: 100%;
+  }
+}
